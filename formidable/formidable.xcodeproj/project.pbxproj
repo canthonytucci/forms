@@ -21,8 +21,9 @@
 		0116323F14F85D52009CB77E /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0116321D14F85D52009CB77E /* Foundation.framework */; };
 		0116324714F85D52009CB77E /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 0116324514F85D52009CB77E /* InfoPlist.strings */; };
 		0116324A14F85D52009CB77E /* formidableTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 0116324914F85D52009CB77E /* formidableTests.m */; };
+		0119CEC414F8671A004A478C /* FormParser.m in Sources */ = {isa = PBXBuildFile; fileRef = 0119CEC314F8671A004A478C /* FormParser.m */; };
+		0119CEC614F877B8004A478C /* testForm.txt in Resources */ = {isa = PBXBuildFile; fileRef = 0119CEC514F877B8004A478C /* testForm.txt */; };
 		011E824A14F86111006478BA /* FormsListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 011E824914F86111006478BA /* FormsListViewController.m */; };
-		011E824E14F86242006478BA /* FormXMLParser.m in Sources */ = {isa = PBXBuildFile; fileRef = 011E824D14F86242006478BA /* FormXMLParser.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -56,10 +57,11 @@
 		0116324614F85D52009CB77E /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		0116324814F85D52009CB77E /* formidableTests.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = formidableTests.h; sourceTree = "<group>"; };
 		0116324914F85D52009CB77E /* formidableTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = formidableTests.m; sourceTree = "<group>"; };
+		0119CEC214F8671A004A478C /* FormParser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FormParser.h; sourceTree = "<group>"; };
+		0119CEC314F8671A004A478C /* FormParser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FormParser.m; sourceTree = "<group>"; };
+		0119CEC514F877B8004A478C /* testForm.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = testForm.txt; sourceTree = "<group>"; };
 		011E824814F86111006478BA /* FormsListViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FormsListViewController.h; sourceTree = "<group>"; };
 		011E824914F86111006478BA /* FormsListViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FormsListViewController.m; sourceTree = "<group>"; };
-		011E824C14F86242006478BA /* FormXMLParser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FormXMLParser.h; sourceTree = "<group>"; };
-		011E824D14F86242006478BA /* FormXMLParser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FormXMLParser.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -128,8 +130,9 @@
 				0116322214F85D52009CB77E /* Supporting Files */,
 				011E824814F86111006478BA /* FormsListViewController.h */,
 				011E824914F86111006478BA /* FormsListViewController.m */,
-				011E824C14F86242006478BA /* FormXMLParser.h */,
-				011E824D14F86242006478BA /* FormXMLParser.m */,
+				0119CEC214F8671A004A478C /* FormParser.h */,
+				0119CEC314F8671A004A478C /* FormParser.m */,
+				0119CEC514F877B8004A478C /* testForm.txt */,
 			);
 			path = formidable;
 			sourceTree = "<group>";
@@ -237,6 +240,7 @@
 				0116322614F85D52009CB77E /* InfoPlist.strings in Resources */,
 				0116322F14F85D52009CB77E /* MainStoryboard_iPhone.storyboard in Resources */,
 				0116323214F85D52009CB77E /* MainStoryboard_iPad.storyboard in Resources */,
+				0119CEC614F877B8004A478C /* testForm.txt in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -275,7 +279,7 @@
 				0116322C14F85D52009CB77E /* AppDelegate.m in Sources */,
 				0116323514F85D52009CB77E /* HomeViewController.m in Sources */,
 				011E824A14F86111006478BA /* FormsListViewController.m in Sources */,
-				011E824E14F86242006478BA /* FormXMLParser.m in Sources */,
+				0119CEC414F8671A004A478C /* FormParser.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -385,8 +389,10 @@
 			buildSettings = {
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "formidable/formidable-Prefix.pch";
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
 				INFOPLIST_FILE = "formidable/formidable-Info.plist";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos5.0;
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -396,8 +402,10 @@
 			buildSettings = {
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "formidable/formidable-Prefix.pch";
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
 				INFOPLIST_FILE = "formidable/formidable-Info.plist";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos5.0;
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;

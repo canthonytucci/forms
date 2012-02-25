@@ -1,0 +1,25 @@
+<form title="Test Form" creator="Chris Tucci"  creatorURL="http://example.com" readonly="NO" destination="http://example.com" allowsDestinationChange="NO">
+    <section title="Section 1" header="This is the Header" footer="This is the footer">
+        <text_item label="Test Text Label" placeholder ="test" value="" />
+            <static_item label="Test Static Label"/>
+        <numeric_item label="Test Numeric Label" placeholder="num" value="" picker="" max="" min="" />
+        <radio_item label="" option_a="" option_b="" />
+        <incremental_item label="" value="" max="" min="" step="" />
+    </section>
+
+    <section title="Section 2" header="This is the Header" footer="This is the footer">
+        <text_item label="Test Text Label" placeholder ="test" value="" />
+            <static_item label="Test Static Label"/>
+        <numeric_item label="Test Numeric Label" placeholder="num" value="" picker="" max="" min="" />
+        <radio_item label="" option_a="" option_b="" />
+        <incremental_item label="" value="" max="" min="" step="" />
+    </section>
+
+    <section title="Section 3" header="This is the Header" footer="This is the footer">
+        <text_item label="Test Text Label" placeholder ="test" value="" />
+            <static_item label="Test Static Label"/>
+        <numeric_item label="Test Numeric Label" placeholder="num" value="" picker="" max="" min="" />
+        <radio_item label="" option_a="" option_b="" />
+        <incremental_item label="" value="" max="" min="" step="" />
+    </section>
+</form>

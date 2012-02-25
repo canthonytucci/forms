@@ -48,7 +48,7 @@
                     <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" prompted="NO"/>
                 </viewController>
             </objects>
-            <point key="canvasLocation" x="-2693" y="-1097"/>
+            <point key="canvasLocation" x="-2929" y="-957"/>
         </scene>
         <!--View Controller - Fill Out Form-->
         <scene sceneID="aKD-Ox-wHa">
@@ -63,7 +63,7 @@
                     <navigationItem key="navigationItem" id="xe9-5t-QrK"/>
                 </viewController>
             </objects>
-            <point key="canvasLocation" x="-1980" y="-1781"/>
+            <point key="canvasLocation" x="-1816" y="-1433"/>
         </scene>
         <!--View Controller - Collected Data Detail-->
         <scene sceneID="NMa-gK-Og6">

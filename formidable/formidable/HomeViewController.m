@@ -7,6 +7,7 @@
 //
 
 #import "HomeViewController.h"
+#import "FormParser.h"
 
 @interface HomeViewController ()
 
@@ -18,6 +19,13 @@
 {
     [super viewDidLoad];
 	// Do any additional setup after loading the view, typically from a nib.
+    NSString *filePath = [[NSBundle mainBundle] pathForResource:@"testForm" ofType:@"txt"];
+    NSData *myData = [NSData dataWithContentsOfFile:filePath];
+    if (myData) {
+        FormParser *parser = [[FormParser alloc]init];
+        NSDictionary *parsedData = [parser parseData:myData];
+        NSLog(@"Parsed Data\n%@", parsedData);
+    }
 }
 
 - (void)viewDidUnload
