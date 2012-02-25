@@ -21,6 +21,8 @@
 		0116323F14F85D52009CB77E /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0116321D14F85D52009CB77E /* Foundation.framework */; };
 		0116324714F85D52009CB77E /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 0116324514F85D52009CB77E /* InfoPlist.strings */; };
 		0116324A14F85D52009CB77E /* formidableTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 0116324914F85D52009CB77E /* formidableTests.m */; };
+		011E824A14F86111006478BA /* FormsListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 011E824914F86111006478BA /* FormsListViewController.m */; };
+		011E824E14F86242006478BA /* FormXMLParser.m in Sources */ = {isa = PBXBuildFile; fileRef = 011E824D14F86242006478BA /* FormXMLParser.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -54,6 +56,10 @@
 		0116324614F85D52009CB77E /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		0116324814F85D52009CB77E /* formidableTests.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = formidableTests.h; sourceTree = "<group>"; };
 		0116324914F85D52009CB77E /* formidableTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = formidableTests.m; sourceTree = "<group>"; };
+		011E824814F86111006478BA /* FormsListViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FormsListViewController.h; sourceTree = "<group>"; };
+		011E824914F86111006478BA /* FormsListViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FormsListViewController.m; sourceTree = "<group>"; };
+		011E824C14F86242006478BA /* FormXMLParser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FormXMLParser.h; sourceTree = "<group>"; };
+		011E824D14F86242006478BA /* FormXMLParser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FormXMLParser.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -120,6 +126,10 @@
 				0116323314F85D52009CB77E /* HomeViewController.h */,
 				0116323414F85D52009CB77E /* HomeViewController.m */,
 				0116322214F85D52009CB77E /* Supporting Files */,
+				011E824814F86111006478BA /* FormsListViewController.h */,
+				011E824914F86111006478BA /* FormsListViewController.m */,
+				011E824C14F86242006478BA /* FormXMLParser.h */,
+				011E824D14F86242006478BA /* FormXMLParser.m */,
 			);
 			path = formidable;
 			sourceTree = "<group>";
@@ -264,6 +274,8 @@
 				0116322814F85D52009CB77E /* main.m in Sources */,
 				0116322C14F85D52009CB77E /* AppDelegate.m in Sources */,
 				0116323514F85D52009CB77E /* HomeViewController.m in Sources */,
+				011E824A14F86111006478BA /* FormsListViewController.m in Sources */,
+				011E824E14F86242006478BA /* FormXMLParser.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
