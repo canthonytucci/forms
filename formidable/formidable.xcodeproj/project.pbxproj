@@ -1,0 +1,458 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		0116321C14F85D52009CB77E /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0116321B14F85D52009CB77E /* UIKit.framework */; };
+		0116321E14F85D52009CB77E /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0116321D14F85D52009CB77E /* Foundation.framework */; };
+		0116322014F85D52009CB77E /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0116321F14F85D52009CB77E /* CoreGraphics.framework */; };
+		0116322614F85D52009CB77E /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 0116322414F85D52009CB77E /* InfoPlist.strings */; };
+		0116322814F85D52009CB77E /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 0116322714F85D52009CB77E /* main.m */; };
+		0116322C14F85D52009CB77E /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 0116322B14F85D52009CB77E /* AppDelegate.m */; };
+		0116322F14F85D52009CB77E /* MainStoryboard_iPhone.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0116322D14F85D52009CB77E /* MainStoryboard_iPhone.storyboard */; };
+		0116323214F85D52009CB77E /* MainStoryboard_iPad.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0116323014F85D52009CB77E /* MainStoryboard_iPad.storyboard */; };
+		0116323514F85D52009CB77E /* HomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0116323414F85D52009CB77E /* HomeViewController.m */; };
+		0116323D14F85D52009CB77E /* SenTestingKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0116323C14F85D52009CB77E /* SenTestingKit.framework */; };
+		0116323E14F85D52009CB77E /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0116321B14F85D52009CB77E /* UIKit.framework */; };
+		0116323F14F85D52009CB77E /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0116321D14F85D52009CB77E /* Foundation.framework */; };
+		0116324714F85D52009CB77E /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 0116324514F85D52009CB77E /* InfoPlist.strings */; };
+		0116324A14F85D52009CB77E /* formidableTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 0116324914F85D52009CB77E /* formidableTests.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		0116324014F85D52009CB77E /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 0116320E14F85D52009CB77E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 0116321614F85D52009CB77E;
+			remoteInfo = formidable;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		0116321714F85D52009CB77E /* formidable.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = formidable.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		0116321B14F85D52009CB77E /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		0116321D14F85D52009CB77E /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		0116321F14F85D52009CB77E /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		0116322314F85D52009CB77E /* formidable-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "formidable-Info.plist"; sourceTree = "<group>"; };
+		0116322514F85D52009CB77E /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		0116322714F85D52009CB77E /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		0116322914F85D52009CB77E /* formidable-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "formidable-Prefix.pch"; sourceTree = "<group>"; };
+		0116322A14F85D52009CB77E /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		0116322B14F85D52009CB77E /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		0116322E14F85D52009CB77E /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = en.lproj/MainStoryboard_iPhone.storyboard; sourceTree = "<group>"; };
+		0116323114F85D52009CB77E /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = en.lproj/MainStoryboard_iPad.storyboard; sourceTree = "<group>"; };
+		0116323314F85D52009CB77E /* HomeViewController.h */ = {isa = PBXFileReference; path = HomeViewController.h; sourceTree = "<group>"; };
+		0116323414F85D52009CB77E /* HomeViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HomeViewController.m; sourceTree = "<group>"; };
+		0116323B14F85D52009CB77E /* formidableTests.octest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = formidableTests.octest; sourceTree = BUILT_PRODUCTS_DIR; };
+		0116323C14F85D52009CB77E /* SenTestingKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SenTestingKit.framework; path = Library/Frameworks/SenTestingKit.framework; sourceTree = DEVELOPER_DIR; };
+		0116324414F85D52009CB77E /* formidableTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "formidableTests-Info.plist"; sourceTree = "<group>"; };
+		0116324614F85D52009CB77E /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		0116324814F85D52009CB77E /* formidableTests.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = formidableTests.h; sourceTree = "<group>"; };
+		0116324914F85D52009CB77E /* formidableTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = formidableTests.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		0116321414F85D52009CB77E /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0116321C14F85D52009CB77E /* UIKit.framework in Frameworks */,
+				0116321E14F85D52009CB77E /* Foundation.framework in Frameworks */,
+				0116322014F85D52009CB77E /* CoreGraphics.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		0116323714F85D52009CB77E /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0116323D14F85D52009CB77E /* SenTestingKit.framework in Frameworks */,
+				0116323E14F85D52009CB77E /* UIKit.framework in Frameworks */,
+				0116323F14F85D52009CB77E /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		0116320C14F85D52009CB77E = {
+			isa = PBXGroup;
+			children = (
+				0116322114F85D52009CB77E /* formidable */,
+				0116324214F85D52009CB77E /* formidableTests */,
+				0116321A14F85D52009CB77E /* Frameworks */,
+				0116321814F85D52009CB77E /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		0116321814F85D52009CB77E /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				0116321714F85D52009CB77E /* formidable.app */,
+				0116323B14F85D52009CB77E /* formidableTests.octest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		0116321A14F85D52009CB77E /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				0116321B14F85D52009CB77E /* UIKit.framework */,
+				0116321D14F85D52009CB77E /* Foundation.framework */,
+				0116321F14F85D52009CB77E /* CoreGraphics.framework */,
+				0116323C14F85D52009CB77E /* SenTestingKit.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		0116322114F85D52009CB77E /* formidable */ = {
+			isa = PBXGroup;
+			children = (
+				0116322A14F85D52009CB77E /* AppDelegate.h */,
+				0116322B14F85D52009CB77E /* AppDelegate.m */,
+				0116322D14F85D52009CB77E /* MainStoryboard_iPhone.storyboard */,
+				0116323014F85D52009CB77E /* MainStoryboard_iPad.storyboard */,
+				0116323314F85D52009CB77E /* HomeViewController.h */,
+				0116323414F85D52009CB77E /* HomeViewController.m */,
+				0116322214F85D52009CB77E /* Supporting Files */,
+			);
+			path = formidable;
+			sourceTree = "<group>";
+		};
+		0116322214F85D52009CB77E /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				0116322314F85D52009CB77E /* formidable-Info.plist */,
+				0116322414F85D52009CB77E /* InfoPlist.strings */,
+				0116322714F85D52009CB77E /* main.m */,
+				0116322914F85D52009CB77E /* formidable-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		0116324214F85D52009CB77E /* formidableTests */ = {
+			isa = PBXGroup;
+			children = (
+				0116324814F85D52009CB77E /* formidableTests.h */,
+				0116324914F85D52009CB77E /* formidableTests.m */,
+				0116324314F85D52009CB77E /* Supporting Files */,
+			);
+			path = formidableTests;
+			sourceTree = "<group>";
+		};
+		0116324314F85D52009CB77E /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				0116324414F85D52009CB77E /* formidableTests-Info.plist */,
+				0116324514F85D52009CB77E /* InfoPlist.strings */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		0116321614F85D52009CB77E /* formidable */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 0116324D14F85D52009CB77E /* Build configuration list for PBXNativeTarget "formidable" */;
+			buildPhases = (
+				0116321314F85D52009CB77E /* Sources */,
+				0116321414F85D52009CB77E /* Frameworks */,
+				0116321514F85D52009CB77E /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = formidable;
+			productName = formidable;
+			productReference = 0116321714F85D52009CB77E /* formidable.app */;
+			productType = "com.apple.product-type.application";
+		};
+		0116323A14F85D52009CB77E /* formidableTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 0116325014F85D52009CB77E /* Build configuration list for PBXNativeTarget "formidableTests" */;
+			buildPhases = (
+				0116323614F85D52009CB77E /* Sources */,
+				0116323714F85D52009CB77E /* Frameworks */,
+				0116323814F85D52009CB77E /* Resources */,
+				0116323914F85D52009CB77E /* ShellScript */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				0116324114F85D52009CB77E /* PBXTargetDependency */,
+			);
+			name = formidableTests;
+			productName = formidableTests;
+			productReference = 0116323B14F85D52009CB77E /* formidableTests.octest */;
+			productType = "com.apple.product-type.bundle";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		0116320E14F85D52009CB77E /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0430;
+			};
+			buildConfigurationList = 0116321114F85D52009CB77E /* Build configuration list for PBXProject "formidable" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 0116320C14F85D52009CB77E;
+			productRefGroup = 0116321814F85D52009CB77E /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				0116321614F85D52009CB77E /* formidable */,
+				0116323A14F85D52009CB77E /* formidableTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		0116321514F85D52009CB77E /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0116322614F85D52009CB77E /* InfoPlist.strings in Resources */,
+				0116322F14F85D52009CB77E /* MainStoryboard_iPhone.storyboard in Resources */,
+				0116323214F85D52009CB77E /* MainStoryboard_iPad.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		0116323814F85D52009CB77E /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0116324714F85D52009CB77E /* InfoPlist.strings in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		0116323914F85D52009CB77E /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "# Run the unit tests in this test bundle.\n\"${SYSTEM_DEVELOPER_DIR}/Tools/RunUnitTests\"\n";
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		0116321314F85D52009CB77E /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0116322814F85D52009CB77E /* main.m in Sources */,
+				0116322C14F85D52009CB77E /* AppDelegate.m in Sources */,
+				0116323514F85D52009CB77E /* HomeViewController.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		0116323614F85D52009CB77E /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0116324A14F85D52009CB77E /* formidableTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		0116324114F85D52009CB77E /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 0116321614F85D52009CB77E /* formidable */;
+			targetProxy = 0116324014F85D52009CB77E /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		0116322414F85D52009CB77E /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				0116322514F85D52009CB77E /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		0116322D14F85D52009CB77E /* MainStoryboard_iPhone.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				0116322E14F85D52009CB77E /* en */,
+			);
+			name = MainStoryboard_iPhone.storyboard;
+			sourceTree = "<group>";
+		};
+		0116323014F85D52009CB77E /* MainStoryboard_iPad.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				0116323114F85D52009CB77E /* en */,
+			);
+			name = MainStoryboard_iPad.storyboard;
+			sourceTree = "<group>";
+		};
+		0116324514F85D52009CB77E /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				0116324614F85D52009CB77E /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		0116324B14F85D52009CB77E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		0116324C14F85D52009CB77E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
+				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		0116324E14F85D52009CB77E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "formidable/formidable-Prefix.pch";
+				INFOPLIST_FILE = "formidable/formidable-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		0116324F14F85D52009CB77E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "formidable/formidable-Prefix.pch";
+				INFOPLIST_FILE = "formidable/formidable-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+		0116325114F85D52009CB77E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/formidable.app/formidable";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(DEVELOPER_LIBRARY_DIR)/Frameworks",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "formidable/formidable-Prefix.pch";
+				INFOPLIST_FILE = "formidableTests/formidableTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = octest;
+			};
+			name = Debug;
+		};
+		0116325214F85D52009CB77E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/formidable.app/formidable";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(DEVELOPER_LIBRARY_DIR)/Frameworks",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "formidable/formidable-Prefix.pch";
+				INFOPLIST_FILE = "formidableTests/formidableTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = octest;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		0116321114F85D52009CB77E /* Build configuration list for PBXProject "formidable" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				0116324B14F85D52009CB77E /* Debug */,
+				0116324C14F85D52009CB77E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		0116324D14F85D52009CB77E /* Build configuration list for PBXNativeTarget "formidable" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				0116324E14F85D52009CB77E /* Debug */,
+				0116324F14F85D52009CB77E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		0116325014F85D52009CB77E /* Build configuration list for PBXNativeTarget "formidableTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				0116325114F85D52009CB77E /* Debug */,
+				0116325214F85D52009CB77E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 0116320E14F85D52009CB77E /* Project object */;
+}
