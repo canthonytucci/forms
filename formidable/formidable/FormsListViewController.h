@@ -8,6 +8,8 @@
 
 #import <UIKit/UIKit.h>
 
-@interface FormsListViewController : UIViewController
+@interface FormsListViewController : UIViewController <UITableViewDataSource, UITableViewDelegate>
 
+@property (nonatomic, strong) IBOutlet UITableView *theTableView;
+@property (nonatomic, strong) NSArray *theForms;
 @end
