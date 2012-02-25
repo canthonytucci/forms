@@ -46,7 +46,7 @@
 		0116322B14F85D52009CB77E /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		0116322E14F85D52009CB77E /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = en.lproj/MainStoryboard_iPhone.storyboard; sourceTree = "<group>"; };
 		0116323114F85D52009CB77E /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = en.lproj/MainStoryboard_iPad.storyboard; sourceTree = "<group>"; };
-		0116323314F85D52009CB77E /* HomeViewController.h */ = {isa = PBXFileReference; path = HomeViewController.h; sourceTree = "<group>"; };
+		0116323314F85D52009CB77E /* HomeViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HomeViewController.h; sourceTree = "<group>"; };
 		0116323414F85D52009CB77E /* HomeViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HomeViewController.m; sourceTree = "<group>"; };
 		0116323B14F85D52009CB77E /* formidableTests.octest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = formidableTests.octest; sourceTree = BUILT_PRODUCTS_DIR; };
 		0116323C14F85D52009CB77E /* SenTestingKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SenTestingKit.framework; path = Library/Frameworks/SenTestingKit.framework; sourceTree = DEVELOPER_DIR; };
@@ -443,6 +443,7 @@
 				0116324F14F85D52009CB77E /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		0116325014F85D52009CB77E /* Build configuration list for PBXNativeTarget "formidableTests" */ = {
 			isa = XCConfigurationList;
@@ -451,6 +452,7 @@
 				0116325214F85D52009CB77E /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
