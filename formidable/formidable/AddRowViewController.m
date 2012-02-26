@@ -1,23 +1,22 @@
 //
-//  FormDetailViewController.m
+//  AddRowViewController.m
 //  formidable
 //
 //  Created by Chris Tucci on 2/25/12.
 //  Copyright (c) 2012 __MyCompanyName__. All rights reserved.
 //
 
-#import "FormDetailViewController.h"
+#import "AddRowViewController.h"
 
-@interface FormDetailViewController ()
+@interface AddRowViewController ()
 
 @end
 
-@implementation FormDetailViewController
+@implementation AddRowViewController
 
-@synthesize theForm;
-@synthesize formTitle;
-
-
+@synthesize popoverController;
+@synthesize theSections;
+@synthesize delegate;
 
 - (id)initWithStyle:(UITableViewStyle)style
 {
@@ -31,13 +30,6 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    
-//    UIView *tableHeaderView = [[UIView alloc]initWithFrame:CGRectMake(0, 0, self.view.bounds.size.width, 70)];
-//    UILabel *titleLabel = [[UILabel alloc]initWithFrame:tableHeaderView.frame];
-//    titleLabel.textAlignment = UITextAlignmentCenter;
-//    titleLabel.font = [UIFont boldSystemFontOfSize:32];
-    formTitle.text = [theForm valueForKey:@"title"];
-
 
     // Uncomment the following line to preserve selection between presentations.
     // self.clearsSelectionOnViewWillAppear = NO;
@@ -48,9 +40,7 @@
 
 - (void)viewDidUnload
 {
-
-    [self setFormTitle:nil];
-        [super viewDidUnload];
+    [super viewDidUnload];
     // Release any retained subviews of the main view.
     // e.g. self.myOutlet = nil;
 }
@@ -64,92 +54,23 @@
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
 {
-    // Return the number of sections.
-    int numsections = [[theForm valueForKey:@"sections"]count];
-    return numsections;
+
+    return 1;
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
-    // Return the number of rows in the section.
-    NSArray * thisSection = [[[theForm valueForKey:@"sections"]objectAtIndex:section]valueForKey:@"items"];
-    int numrows = [thisSection count];
-    
+    int numrows = [theSections count];
     return numrows;
-}
-
--(NSString *)tableView:(UITableView *)tableView titleForHeaderInSection:(NSInteger)section {
-    
-    NSString *titleForHeader = @"";
-    
-    titleForHeader = [[[theForm valueForKey:@"sections"]objectAtIndex:section]valueForKey:@"title"];
-    
-    return titleForHeader;
-    
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    
-    static NSString *CellIdentifier = @"TextCell";
-    NSDictionary *itemForCell = [[[[theForm valueForKey:@"sections"]objectAtIndex:indexPath.section]valueForKey:@"items"]objectAtIndex:indexPath.row];
-    NSLog(@"Item For Cell: %@",itemForCell);
-    NSString *itemType = [itemForCell valueForKey:@"type"];
-    
-    if ([itemType isEqualToString:@"text_item"])
-    {
-        CellIdentifier = @"TextCell";
-    }
-    else if ([itemType isEqualToString:@"numeric_item"])
-    {
-        CellIdentifier = @"NumericCell";
-    }
-    else if ([itemType isEqualToString:@"static_item"])
-    {
-        CellIdentifier = @"StaticCell";
-    }
-    else if ([itemType isEqualToString:@"radio_item"])
-    {
-        CellIdentifier  = @"RadioCell";
-    }
-    else if ([itemType isEqualToString:@"incremental_item"])
-    {
-        CellIdentifier = @"IncrementalCell";
-    }
-    
+    static NSString *CellIdentifier = @"Cell";
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier];
     
     // Configure the cell...
-    if ([itemType isEqualToString:@"text_item"])
-    {
-        UILabel *textCellLabel = (UILabel *)[cell viewWithTag:101];
-        textCellLabel.text = [itemForCell valueForKey:@"label"];
-        UITextField *textCellTextField = (UITextField *)[cell viewWithTag:102];
-        textCellTextField.placeholder = [itemForCell valueForKey:@"placeholder"];
-        
-    }
-    else if ([itemType isEqualToString:@"numeric_item"])
-    {
-        UILabel *numericCellLabel = (UILabel *)[cell viewWithTag:101];
-        numericCellLabel.text = [itemForCell valueForKey:@"label"];
-        UITextField *numericCellTextField = (UITextField *)[cell viewWithTag:102];
-        numericCellTextField.placeholder = [itemForCell valueForKey:@"placeholder"];
-        
-    }
-    else if ([itemType isEqualToString:@"static_item"])
-    {
-        UILabel *staticCellLabel = (UILabel *)[cell viewWithTag:101];
-        staticCellLabel.text = [itemForCell valueForKey:@"label"];
-        
-    }
-    else if ([itemType isEqualToString:@"radio_item"])
-    {
-    }
-    else if ([itemType isEqualToString:@"incremental_item"])
-    {
-    }
-    
-    
+    cell.textLabel.text = [[theSections objectAtIndex:indexPath.row]valueForKey:@"title"];
     
     return cell;
 }
@@ -204,6 +125,9 @@
      // Pass the selected object to the new view controller.
      [self.navigationController pushViewController:detailViewController animated:YES];
      */
+    
+    [delegate addRowToSection:indexPath.row];
+    [popoverController dismissPopoverAnimated:YES];
 }
 
 @end

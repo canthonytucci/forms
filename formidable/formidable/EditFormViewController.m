@@ -1,64 +1,64 @@
 //
-//  FormDetailViewController.m
+//  EditFormViewController.m
 //  formidable
 //
 //  Created by Chris Tucci on 2/25/12.
 //  Copyright (c) 2012 __MyCompanyName__. All rights reserved.
 //
 
-#import "FormDetailViewController.h"
+#import "EditFormViewController.h"
+#import "AddRowViewController.h"
 
-@interface FormDetailViewController ()
+@interface EditFormViewController ()
 
 @end
 
-@implementation FormDetailViewController
-
+@implementation EditFormViewController
 @synthesize theForm;
+@synthesize theTableView;
 @synthesize formTitle;
 
-
-
-- (id)initWithStyle:(UITableViewStyle)style
+- (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
-    self = [super initWithStyle:style];
+    self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
     if (self) {
         // Custom initialization
     }
     return self;
 }
 
+//- (void)loadView
+//{
+//    // If you create your views manually, you MUST override this method and use it to create your views.
+//    // If you use Interface Builder to create your views, then you must NOT override this method.
+//}
+
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    
-//    UIView *tableHeaderView = [[UIView alloc]initWithFrame:CGRectMake(0, 0, self.view.bounds.size.width, 70)];
-//    UILabel *titleLabel = [[UILabel alloc]initWithFrame:tableHeaderView.frame];
-//    titleLabel.textAlignment = UITextAlignmentCenter;
-//    titleLabel.font = [UIFont boldSystemFontOfSize:32];
+	// Do any additional setup after loading the view, typically from a nib.
+    [self refreshFormTitle];
+
+}
+
+-(void)refreshFormTitle
+{
     formTitle.text = [theForm valueForKey:@"title"];
-
-
-    // Uncomment the following line to preserve selection between presentations.
-    // self.clearsSelectionOnViewWillAppear = NO;
- 
-    // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
-    // self.navigationItem.rightBarButtonItem = self.editButtonItem;
 }
 
 - (void)viewDidUnload
 {
-
+    [self setTheTableView:nil];
     [self setFormTitle:nil];
-        [super viewDidUnload];
+    [super viewDidUnload];
     // Release any retained subviews of the main view.
-    // e.g. self.myOutlet = nil;
 }
 
 - (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation
 {
     return (interfaceOrientation == UIInterfaceOrientationPortrait);
 }
+
 
 #pragma mark - Table view data source
 
@@ -76,16 +76,6 @@
     int numrows = [thisSection count];
     
     return numrows;
-}
-
--(NSString *)tableView:(UITableView *)tableView titleForHeaderInSection:(NSInteger)section {
-    
-    NSString *titleForHeader = @"";
-    
-    titleForHeader = [[[theForm valueForKey:@"sections"]objectAtIndex:section]valueForKey:@"title"];
-    
-    return titleForHeader;
-    
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
@@ -116,6 +106,9 @@
     {
         CellIdentifier = @"IncrementalCell";
     }
+    else {
+        CellIdentifier = @"NewCell";
+    }
     
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier];
     
@@ -144,54 +137,57 @@
     }
     else if ([itemType isEqualToString:@"radio_item"])
     {
+        
     }
     else if ([itemType isEqualToString:@"incremental_item"])
     {
+        
     }
-    
-    
+    else {
+        cell.textLabel.text = @"I am a new row";
+    }
     
     return cell;
 }
 
 /*
-// Override to support conditional editing of the table view.
-- (BOOL)tableView:(UITableView *)tableView canEditRowAtIndexPath:(NSIndexPath *)indexPath
-{
-    // Return NO if you do not want the specified item to be editable.
-    return YES;
-}
-*/
+ // Override to support conditional editing of the table view.
+ - (BOOL)tableView:(UITableView *)tableView canEditRowAtIndexPath:(NSIndexPath *)indexPath
+ {
+ // Return NO if you do not want the specified item to be editable.
+ return YES;
+ }
+ */
 
 /*
-// Override to support editing the table view.
-- (void)tableView:(UITableView *)tableView commitEditingStyle:(UITableViewCellEditingStyle)editingStyle forRowAtIndexPath:(NSIndexPath *)indexPath
-{
-    if (editingStyle == UITableViewCellEditingStyleDelete) {
-        // Delete the row from the data source
-        [tableView deleteRowsAtIndexPaths:[NSArray arrayWithObject:indexPath] withRowAnimation:UITableViewRowAnimationFade];
-    }   
-    else if (editingStyle == UITableViewCellEditingStyleInsert) {
-        // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view
-    }   
-}
-*/
+ // Override to support editing the table view.
+ - (void)tableView:(UITableView *)tableView commitEditingStyle:(UITableViewCellEditingStyle)editingStyle forRowAtIndexPath:(NSIndexPath *)indexPath
+ {
+ if (editingStyle == UITableViewCellEditingStyleDelete) {
+ // Delete the row from the data source
+ [tableView deleteRowsAtIndexPaths:[NSArray arrayWithObject:indexPath] withRowAnimation:UITableViewRowAnimationFade];
+ }   
+ else if (editingStyle == UITableViewCellEditingStyleInsert) {
+ // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view
+ }   
+ }
+ */
 
 /*
-// Override to support rearranging the table view.
-- (void)tableView:(UITableView *)tableView moveRowAtIndexPath:(NSIndexPath *)fromIndexPath toIndexPath:(NSIndexPath *)toIndexPath
-{
-}
-*/
+ // Override to support rearranging the table view.
+ - (void)tableView:(UITableView *)tableView moveRowAtIndexPath:(NSIndexPath *)fromIndexPath toIndexPath:(NSIndexPath *)toIndexPath
+ {
+ }
+ */
 
 /*
-// Override to support conditional rearranging of the table view.
-- (BOOL)tableView:(UITableView *)tableView canMoveRowAtIndexPath:(NSIndexPath *)indexPath
-{
-    // Return NO if you do not want the item to be re-orderable.
-    return YES;
-}
-*/
+ // Override to support conditional rearranging of the table view.
+ - (BOOL)tableView:(UITableView *)tableView canMoveRowAtIndexPath:(NSIndexPath *)indexPath
+ {
+ // Return NO if you do not want the item to be re-orderable.
+ return YES;
+ }
+ */
 
 #pragma mark - Table view delegate
 
@@ -204,6 +200,29 @@
      // Pass the selected object to the new view controller.
      [self.navigationController pushViewController:detailViewController animated:YES];
      */
+}
+
+- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
+    
+    if ([[segue identifier] isEqualToString:@"addRow"]) {
+
+        AddRowViewController *detailViewController = [segue destinationViewController];
+        detailViewController.theSections = [theForm valueForKey:@"sections"];
+        detailViewController.delegate = self;
+        UIStoryboardPopoverSegue* popoverSegue = (UIStoryboardPopoverSegue*)segue;
+        [detailViewController setPopoverController:[popoverSegue popoverController]];
+
+        }
+} 
+
+
+//MARK: Add Row Delegate Delegate Methods
+-(void)addRowToSection:(int)section
+{
+    NSMutableDictionary *aNewItem = [[NSMutableDictionary alloc]init];
+    [aNewItem setValue:@"New Item" forKey:@"label"];
+    [[[[theForm valueForKey:@"sections"]objectAtIndex:section]valueForKey:@"items"]addObject:aNewItem];
+    [theTableView reloadData];
 }
 
 @end

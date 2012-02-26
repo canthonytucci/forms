@@ -11,6 +11,7 @@
 @interface FormDetailViewController : UITableViewController
 
 @property (nonatomic, strong) NSDictionary *theForm;
+@property (weak, nonatomic) IBOutlet UILabel *formTitle;
 
 
 @end

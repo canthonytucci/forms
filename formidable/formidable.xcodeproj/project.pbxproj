@@ -26,6 +26,9 @@
 		0119CEC614F877B8004A478C /* testForm.txt in Resources */ = {isa = PBXBuildFile; fileRef = 0119CEC514F877B8004A478C /* testForm.txt */; };
 		011E824A14F86111006478BA /* FormsListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 011E824914F86111006478BA /* FormsListViewController.m */; };
 		012F0FC214F8822B00EF332D /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 012F0FC114F8822B00EF332D /* CoreData.framework */; };
+		01A5C1E014F9AC5100B239E5 /* CreateEditListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 01A5C1DF14F9AC5100B239E5 /* CreateEditListViewController.m */; };
+		01E8336314F9BFA6007717E8 /* EditFormViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 01E8336214F9BFA6007717E8 /* EditFormViewController.m */; };
+		01E8336714F9CB94007717E8 /* AddRowViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 01E8336614F9CB94007717E8 /* AddRowViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -67,6 +70,12 @@
 		011E824814F86111006478BA /* FormsListViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FormsListViewController.h; sourceTree = "<group>"; };
 		011E824914F86111006478BA /* FormsListViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FormsListViewController.m; sourceTree = "<group>"; };
 		012F0FC114F8822B00EF332D /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
+		01A5C1DE14F9AC5100B239E5 /* CreateEditListViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CreateEditListViewController.h; sourceTree = "<group>"; };
+		01A5C1DF14F9AC5100B239E5 /* CreateEditListViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CreateEditListViewController.m; sourceTree = "<group>"; };
+		01E8336114F9BFA6007717E8 /* EditFormViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EditFormViewController.h; sourceTree = "<group>"; };
+		01E8336214F9BFA6007717E8 /* EditFormViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EditFormViewController.m; sourceTree = "<group>"; };
+		01E8336514F9CB94007717E8 /* AddRowViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AddRowViewController.h; sourceTree = "<group>"; };
+		01E8336614F9CB94007717E8 /* AddRowViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AddRowViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -142,6 +151,12 @@
 				0119CEC514F877B8004A478C /* testForm.txt */,
 				0106534014F96BB600AB0876 /* FormDetailViewController.h */,
 				0106534114F96BB600AB0876 /* FormDetailViewController.m */,
+				01A5C1DE14F9AC5100B239E5 /* CreateEditListViewController.h */,
+				01A5C1DF14F9AC5100B239E5 /* CreateEditListViewController.m */,
+				01E8336114F9BFA6007717E8 /* EditFormViewController.h */,
+				01E8336214F9BFA6007717E8 /* EditFormViewController.m */,
+				01E8336514F9CB94007717E8 /* AddRowViewController.h */,
+				01E8336614F9CB94007717E8 /* AddRowViewController.m */,
 			);
 			path = formidable;
 			sourceTree = "<group>";
@@ -290,6 +305,9 @@
 				011E824A14F86111006478BA /* FormsListViewController.m in Sources */,
 				0119CEC414F8671A004A478C /* FormParser.m in Sources */,
 				0106534214F96BB600AB0876 /* FormDetailViewController.m in Sources */,
+				01A5C1E014F9AC5100B239E5 /* CreateEditListViewController.m in Sources */,
+				01E8336314F9BFA6007717E8 /* EditFormViewController.m in Sources */,
+				01E8336714F9CB94007717E8 /* AddRowViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
