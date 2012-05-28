@@ -85,6 +85,12 @@
             [[_lastObject valueForKey:@"items"] addObject:anIncrementalItem];
             current = anIncrementalItem;
 
+        } else if ([elementName isEqualToString:@"list_item"])
+        {
+            NSMutableDictionary *aListItem = [[NSMutableDictionary  alloc]init];
+            [aListItem  setValue:@"list_item" forKey:@"type"];
+            [[_lastObject valueForKey:@"items"]addObject:aListItem];
+            current = aListItem;
         }
 
         for(id key in [attributeDict allKeys]){

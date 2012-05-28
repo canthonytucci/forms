@@ -32,7 +32,13 @@
         NSString *documentsDirectoryPath = [NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES) objectAtIndex:0];
         NSString *templates_directory = [documentsDirectoryPath stringByAppendingPathComponent:@"/templates"];
         NSError *error;
-        [[NSFileManager defaultManager] createDirectoryAtPath:templates_directory withIntermediateDirectories:NO attributes:nil error:&error]; //Create folder
+        [[NSFileManager defaultManager] createDirectoryAtPath:templates_directory withIntermediateDirectories:NO attributes:nil error:&error]; 
+        
+
+        NSString *collected_directory = [documentsDirectoryPath stringByAppendingPathComponent:@"/collected"];
+        [[NSFileManager defaultManager] createDirectoryAtPath:collected_directory withIntermediateDirectories:NO attributes:nil error:&error];
+        
+        //Create folder
 
         NSString *fileName = [NSString stringWithFormat:@"%@.plist", [parsedData valueForKey:@"title"]];
         NSString *fullPath = [templates_directory

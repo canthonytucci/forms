@@ -1,23 +1,19 @@
 //
-//  AddRowViewController.m
+//  SelectRowTypeViewController.m
 //  formidable
 //
-//  Created by Chris Tucci on 2/25/12.
+//  Created by Chris Tucci on 3/8/12.
 //  Copyright (c) 2012 __MyCompanyName__. All rights reserved.
 //
 
-#import "AddRowViewController.h"
 #import "SelectRowTypeViewController.h"
 
-@interface AddRowViewController ()
+@interface SelectRowTypeViewController ()
 
 @end
 
-@implementation AddRowViewController
-
-@synthesize popoverController;
-@synthesize theSections;
-@synthesize delegate;
+@implementation SelectRowTypeViewController
+@synthesize theSection, delegate, popoverController;
 
 - (id)initWithStyle:(UITableViewStyle)style
 {
@@ -51,39 +47,16 @@
     return (interfaceOrientation == UIInterfaceOrientationPortrait);
 }
 
-#pragma mark - Table view data source
 
-- (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
-{
 
-    return 1;
-}
 
-- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
-{
-    int numrows = [theSections count];
-    return numrows;
-}
-
-- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
-{
-    static NSString *CellIdentifier = @"Cell";
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier];
-    
-    // Configure the cell...
-    cell.textLabel.text = [[theSections objectAtIndex:indexPath.row]valueForKey:@"title"];
-    
-    return cell;
-}
-
-/*
 // Override to support conditional editing of the table view.
 - (BOOL)tableView:(UITableView *)tableView canEditRowAtIndexPath:(NSIndexPath *)indexPath
 {
     // Return NO if you do not want the specified item to be editable.
-    return YES;
+    return NO;
 }
-*/
+
 
 /*
 // Override to support editing the table view.
@@ -117,23 +90,35 @@
 
 #pragma mark - Table view delegate
 
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-
-    if ([[segue identifier] isEqualToString:@"pushRowType"]) {
-        SelectRowTypeViewController *detailView = [segue destinationViewController];
-        NSIndexPath *indexPath = [[self tableView]indexPathForCell:sender];
-        detailView.theSection = indexPath.row;
-        detailView.delegate = delegate;
-
-        [detailView setPopoverController:popoverController];
-        
-        
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    switch (indexPath.row) {
+        case 0:
+            [delegate addRowToSection:theSection withType:@"text_item"];
+            break;
+        case 1:
+            [delegate addRowToSection:theSection withType:@"static_item"];
+            break;
+        case 2:
+            [delegate addRowToSection:theSection withType:@"numeric_item"];
+            break;
+        case 3:
+            [delegate addRowToSection:theSection withType:@"radio_item"];
+            break;
+        case 4:
+            [delegate addRowToSection:theSection withType:@"incremental_item"];
+            break;
+        case 5:
+            [delegate addRowToSection:theSection withType:@"list_item"];
+            break;
+            
+        default:
+            break;
     }
-}
+    
+    [popoverController dismissPopoverAnimated:YES];
 
-//- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
-//{
-//    [self performSegueWithIdentifier:@"pushRowType" sender:indexPath];
-//}
+
+}
 
 @end

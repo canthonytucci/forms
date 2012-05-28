@@ -7,9 +7,11 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "DownloadFormViewController.h"
 
-@interface CreateEditListViewController : UIViewController <UITableViewDelegate, UITableViewDataSource>
+@interface CreateEditListViewController : UIViewController <UITableViewDelegate, UITableViewDataSource, DownloadFormProtocol>
 @property (nonatomic, strong) NSArray *theForms;
 @property (weak, nonatomic) IBOutlet UITableView *theTableView;
+@property (nonatomic, strong) id popoverController;
 
 @end

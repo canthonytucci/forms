@@ -8,17 +8,13 @@
 
 #import <UIKit/UIKit.h>
 
-@protocol AddRowProtocol <NSObject>
-            
--(void)addRowToSection:(int)section;
 
-@end
 
 @interface AddRowViewController : UITableViewController
 
 
 @property (nonatomic, strong) UIPopoverController *popoverController;
 @property (nonatomic, strong) NSArray *theSections;
-@property (nonatomic, strong) id <AddRowProtocol> delegate;
+@property (nonatomic, strong) id  delegate;
 
 @end

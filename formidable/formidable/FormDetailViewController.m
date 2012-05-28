@@ -16,6 +16,7 @@
 
 @synthesize theForm;
 @synthesize formTitle;
+@synthesize currentTextField;
 
 
 
@@ -96,57 +97,67 @@
     NSLog(@"Item For Cell: %@",itemForCell);
     NSString *itemType = [itemForCell valueForKey:@"type"];
     
-    if ([itemType isEqualToString:@"text_item"])
-    {
+    if ([itemType isEqualToString:@"text_item"]) {
         CellIdentifier = @"TextCell";
-    }
-    else if ([itemType isEqualToString:@"numeric_item"])
-    {
+    } else if ([itemType isEqualToString:@"numeric_item"]) {
         CellIdentifier = @"NumericCell";
-    }
-    else if ([itemType isEqualToString:@"static_item"])
-    {
+    } else if ([itemType isEqualToString:@"static_item"]) {
         CellIdentifier = @"StaticCell";
-    }
-    else if ([itemType isEqualToString:@"radio_item"])
-    {
+    } else if ([itemType isEqualToString:@"radio_item"]) {
         CellIdentifier  = @"RadioCell";
-    }
-    else if ([itemType isEqualToString:@"incremental_item"])
-    {
+    } else if ([itemType isEqualToString:@"incremental_item"]) {
         CellIdentifier = @"IncrementalCell";
+    } else if ([itemType isEqualToString:@"list_item"]) {
+        CellIdentifier = @"ListCell";
     }
     
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier];
     
     // Configure the cell...
-    if ([itemType isEqualToString:@"text_item"])
-    {
+    if ([itemType isEqualToString:@"text_item"]) {
         UILabel *textCellLabel = (UILabel *)[cell viewWithTag:101];
         textCellLabel.text = [itemForCell valueForKey:@"label"];
         UITextField *textCellTextField = (UITextField *)[cell viewWithTag:102];
         textCellTextField.placeholder = [itemForCell valueForKey:@"placeholder"];
-        
-    }
-    else if ([itemType isEqualToString:@"numeric_item"])
-    {
+        textCellTextField.delegate = self;   
+    } else if ([itemType isEqualToString:@"numeric_item"]) {
         UILabel *numericCellLabel = (UILabel *)[cell viewWithTag:101];
         numericCellLabel.text = [itemForCell valueForKey:@"label"];
         UITextField *numericCellTextField = (UITextField *)[cell viewWithTag:102];
         numericCellTextField.placeholder = [itemForCell valueForKey:@"placeholder"];
+        numericCellTextField.delegate = self;
         
-    }
-    else if ([itemType isEqualToString:@"static_item"])
-    {
+    } else if ([itemType isEqualToString:@"static_item"]) {
         UILabel *staticCellLabel = (UILabel *)[cell viewWithTag:101];
         staticCellLabel.text = [itemForCell valueForKey:@"label"];
         
-    }
-    else if ([itemType isEqualToString:@"radio_item"])
-    {
-    }
-    else if ([itemType isEqualToString:@"incremental_item"])
-    {
+    } else if ([itemType isEqualToString:@"radio_item"]) {
+        
+        UILabel *radioLabel = (UILabel *)[cell viewWithTag:101];
+        radioLabel.text = [itemForCell valueForKey:@"label"];
+        UISegmentedControl *segmentedControl = (UISegmentedControl *)[cell viewWithTag:102];
+        [segmentedControl setTitle:[itemForCell valueForKey:@"optiona"] forSegmentAtIndex:0];
+        [segmentedControl setTitle:[itemForCell valueForKey:@"optionb"] forSegmentAtIndex:1];
+        [segmentedControl addTarget:self action:@selector(segmentedControlValueDidChange:) forControlEvents:UIControlEventValueChanged];
+        
+    } else if ([itemType isEqualToString:@"incremental_item"]) {
+        
+        UILabel *incrementalLabel = (UILabel *)[cell viewWithTag:101];
+        incrementalLabel.text = [itemForCell valueForKey:@"label"];
+
+        UITextView *textField = (UITextView *)[cell viewWithTag:102];
+        textField.text = [itemForCell valueForKey:@"value"];
+        
+        UIStepper *stepper = (UIStepper *)[cell viewWithTag:103];
+        stepper.value = [[itemForCell valueForKey:@"value"]doubleValue];
+        [stepper addTarget:self action:@selector(stepperValueDidChange:) forControlEvents:UIControlEventValueChanged];
+        
+        
+    } else if ([itemType isEqualToString:@"list_item"]) {
+        UILabel *label = (UILabel *)[cell viewWithTag:101];
+        label.text = [itemForCell valueForKey:@"label"];
+        UILabel *valueLabel = (UILabel *)[cell viewWithTag:102];
+        valueLabel.text = [itemForCell valueForKey:@"value"];
     }
     
     
@@ -154,56 +165,102 @@
     return cell;
 }
 
-/*
-// Override to support conditional editing of the table view.
-- (BOOL)tableView:(UITableView *)tableView canEditRowAtIndexPath:(NSIndexPath *)indexPath
+-(void)stepperValueDidChange:(id)sender
 {
-    // Return NO if you do not want the specified item to be editable.
+    int section =  [[self tableView]indexPathForCell:(UITableViewCell *)[[sender superview]superview]].section;
+    int row =  [[self tableView]indexPathForCell:(UITableViewCell *)[[sender superview]superview]].row;
+    UITextField *associatedTextField = (UITextField *)[[[self tableView]cellForRowAtIndexPath:[[self tableView]indexPathForCell:(UITableViewCell *)[[sender superview]superview]]]viewWithTag:102];
+    NSString *newValue = [[NSNumber numberWithDouble:[(UIStepper *)sender value]]stringValue];
+    
+    associatedTextField.text = newValue;
+    
+    id item = [[[[theForm valueForKey:@"sections"]objectAtIndex:section]valueForKey:@"items"]objectAtIndex:row];
+    
+    [item setValue:newValue forKey:@"value"];
+    
+}
+
+-(void)segmentedControlValueDidChange:(id)sender
+{
+    int section =  [[self tableView]indexPathForCell:(UITableViewCell *)[[sender superview]superview]].section;
+    int row =  [[self tableView]indexPathForCell:(UITableViewCell *)[[sender superview]superview]].row;
+    id item = [[[[theForm valueForKey:@"sections"]objectAtIndex:section]valueForKey:@"items"]objectAtIndex:row];
+    id value;
+    if ([(UISegmentedControl *)sender selectedSegmentIndex] == 0)
+    {
+        value = @"optiona";
+    }
+    else 
+    {
+        value = @"optionb";
+    }
+    
+    [item setValue: value forKey:@"value"];
+
+}
+
+-(void)textFieldDidBeginEditing:(UITextField *)textField
+{
+
+    currentTextField = textField;
+    
+}
+
+-(BOOL)textField:(UITextField *)textField shouldChangeCharactersInRange:(NSRange)range replacementString:(NSString *)string {
+        
+    int section =  [[self tableView]indexPathForCell:(UITableViewCell *)[[textField superview]superview]].section;
+    int row =  [[self tableView]indexPathForCell:(UITableViewCell *)[[textField superview]superview]].row;
+    NSString *newString = [textField.text stringByReplacingCharactersInRange:range withString:string];
+    string = newString;
+    id item = [[[[theForm valueForKey:@"sections"]objectAtIndex:section]valueForKey:@"items"]objectAtIndex:row];
+    [item setValue:string forKey:@"value"];
+
     return YES;
 }
-*/
 
-/*
-// Override to support editing the table view.
-- (void)tableView:(UITableView *)tableView commitEditingStyle:(UITableViewCellEditingStyle)editingStyle forRowAtIndexPath:(NSIndexPath *)indexPath
+-(IBAction)saveButtonPressed:(id)sender
 {
-    if (editingStyle == UITableViewCellEditingStyleDelete) {
-        // Delete the row from the data source
-        [tableView deleteRowsAtIndexPaths:[NSArray arrayWithObject:indexPath] withRowAnimation:UITableViewRowAnimationFade];
-    }   
-    else if (editingStyle == UITableViewCellEditingStyleInsert) {
-        // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view
-    }   
-}
-*/
+    NSString *formName = [theForm valueForKey:@"title"];
+    NSDateFormatter *formatter = [[NSDateFormatter alloc] init];
+    [formatter setDateFormat: @"yyyy-MM-dd-HH:mm:ss"]; 
+    NSString *dateString = [formatter stringFromDate:[NSDate date]];
+    formName = [NSString stringWithFormat:@"%@_%@",formName,dateString];
+        
 
-/*
-// Override to support rearranging the table view.
-- (void)tableView:(UITableView *)tableView moveRowAtIndexPath:(NSIndexPath *)fromIndexPath toIndexPath:(NSIndexPath *)toIndexPath
-{
-}
-*/
+        NSString *documentsDirectoryPath = [NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES) objectAtIndex:0];
+        NSString *templatePath = [documentsDirectoryPath stringByAppendingPathComponent:@"/collected"];
+        templatePath = [templatePath stringByAppendingPathComponent:formName];
+        [theForm writeToFile:templatePath atomically:YES];
+    
 
-/*
-// Override to support conditional rearranging of the table view.
-- (BOOL)tableView:(UITableView *)tableView canMoveRowAtIndexPath:(NSIndexPath *)indexPath
-{
-    // Return NO if you do not want the item to be re-orderable.
-    return YES;
+
+    [[self navigationController]popViewControllerAnimated:YES];
 }
-*/
+
 
 #pragma mark - Table view delegate
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    // Navigation logic may go here. Create and push another view controller.
-    /*
-     <#DetailViewController#> *detailViewController = [[<#DetailViewController#> alloc] initWithNibName:@"<#Nib name#>" bundle:nil];
-     // ...
-     // Pass the selected object to the new view controller.
-     [self.navigationController pushViewController:detailViewController animated:YES];
-     */
+    [currentTextField resignFirstResponder];
+    
 }
 
+-(void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender 
+{
+    if ([[segue identifier]isEqualToString:@"editPickerItem"]){
+        PickerSelectionViewController *detailViewController = [segue destinationViewController];
+        detailViewController.delegate = self;
+        int section = [self.tableView indexPathForSelectedRow].section;
+        int row = [self.tableView indexPathForSelectedRow].row;
+        id item = [[[[theForm valueForKey:@"sections"] objectAtIndex:section] valueForKey:@"items"] objectAtIndex:row];
+        detailViewController.theItem = item;
+    }
+}
+
+#pragma mark - picker delegate
+
+-(void)pickerValueDidChange {
+    [self.tableView reloadData];
+}
 @end

@@ -7,11 +7,17 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "PickerSelectionViewController.h"
 
-@interface FormDetailViewController : UITableViewController
+@interface FormDetailViewController : UITableViewController <UITextFieldDelegate, PickerViewDelegate>
 
 @property (nonatomic, strong) NSDictionary *theForm;
 @property (weak, nonatomic) IBOutlet UILabel *formTitle;
+@property (nonatomic, strong) UITextField *currentTextField;
 
+
+-(void)segmentedControlValueDidChange:(id)sender;
+-(void)stepperValueDidChange:(id)sender;
+-(IBAction)saveButtonPressed:(id)sender;
 
 @end

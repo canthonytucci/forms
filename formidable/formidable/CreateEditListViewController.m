@@ -16,6 +16,7 @@
 @implementation CreateEditListViewController
 @synthesize theTableView;
 @synthesize theForms;
+@synthesize popoverController;
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
@@ -30,7 +31,15 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    self.navigationController.navigationBar.hidden = NO;
 	// Do any additional setup after loading the view, typically from a nib.
+}
+
+-(void)viewWillAppear:(BOOL)animated
+{
+    [super viewWillAppear:animated];
+    self.navigationController.navigationBar.hidden = NO;
+
 }
 
 - (void)viewDidUnload
@@ -104,9 +113,7 @@
         NSMutableDictionary *firstSection = [[NSMutableDictionary alloc]init];
         [firstSection setValue:@"First Section" forKey:@"title"];
         NSMutableArray *items = [[NSMutableArray alloc]init ];
-        NSMutableDictionary *firstItem = [[NSMutableDictionary alloc]init ];
-        [firstItem setValue:@"First Item" forKey:@"label"];
-        [items addObject:firstItem];
+
         [firstSection setValue:items forKey:@"items"];
         [sections addObject:firstSection];
         
@@ -121,10 +128,23 @@
         NSString *templatePath = [documentsDirectoryPath stringByAppendingPathComponent:@"/templates"];
         templatePath = [templatePath stringByAppendingPathComponent:filename];
         NSMutableDictionary *form = [[NSMutableDictionary alloc]initWithContentsOfFile:templatePath];
+        detailViewController.pathToForm = templatePath;
         detailViewController.theForm = form;
         
+    } else if ([[segue identifier]isEqualToString:@"showDownloadView"]) {
+        DownloadFormViewController *detailViewController = [segue destinationViewController];
+        popoverController = [(UIStoryboardPopoverSegue *)segue popoverController];
+
+        detailViewController.delegate = self;
     }
     
+}
+
+-(void)connectionDidFinishSuccessfully {
+    [popoverController dismissPopoverAnimated:YES];
+    UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Download Successful" message:@"Your form has been downloaded successfully, enjoy!" delegate:nil cancelButtonTitle:@"OK" otherButtonTitles: nil];
+    [alert show];
+    [self.theTableView reloadData];
 }
 
 

@@ -3,23 +3,24 @@
         <text_item label="Test Text Label" placeholder ="test" value="" />
             <static_item label="Test Static Label"/>
         <numeric_item label="Test Numeric Label" placeholder="num" value="" picker="" max="" min="" />
-        <radio_item label="" option_a="" option_b="" />
-        <incremental_item label="" value="" max="" min="" step="" />
+        <radio_item label="Radio" option_a="Option A" option_b="Option B" />
+        <incremental_item label="Incremental" value="0.0" max="" min="" step="" />
     </section>
 
     <section title="Section 2" header="This is the Header" footer="This is the footer">
         <text_item label="Test Text Label" placeholder ="test" value="" />
             <static_item label="Test Static Label"/>
         <numeric_item label="Test Numeric Label" placeholder="num" value="" picker="" max="" min="" />
-        <radio_item label="" option_a="" option_b="" />
-        <incremental_item label="" value="" max="" min="" step="" />
+        <radio_item label="Radio" option_a="Option A" option_b="Option B" />
+        <incremental_item label="Incremental" value="0.0" max="" min="" step="" />
     </section>
 
     <section title="Section 3" header="This is the Header" footer="This is the footer">
         <text_item label="Test Text Label" placeholder ="test" value="" />
             <static_item label="Test Static Label"/>
         <numeric_item label="Test Numeric Label" placeholder="num" value="" picker="" max="" min="" />
-        <radio_item label="" option_a="" option_b="" />
-        <incremental_item label="" value="" max="" min="" step="" />
+        <radio_item label="Radio" option_a="Option A" option_b="Option B" />
+        <incremental_item label="Incremental" value="0.0" max="" min="" step="" />
+        <list_item label="List" value="0" options="one,two,three,four" />
     </section>
 </form>

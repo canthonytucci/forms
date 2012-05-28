@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		0106534214F96BB600AB0876 /* FormDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0106534114F96BB600AB0876 /* FormDetailViewController.m */; };
+		010BBADD15058A6D0006591C /* Texture--1.png in Resources */ = {isa = PBXBuildFile; fileRef = 010BBADC15058A6D0006591C /* Texture--1.png */; };
 		0116321C14F85D52009CB77E /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0116321B14F85D52009CB77E /* UIKit.framework */; };
 		0116321E14F85D52009CB77E /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0116321D14F85D52009CB77E /* Foundation.framework */; };
 		0116322014F85D52009CB77E /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0116321F14F85D52009CB77E /* CoreGraphics.framework */; };
@@ -26,9 +27,25 @@
 		0119CEC614F877B8004A478C /* testForm.txt in Resources */ = {isa = PBXBuildFile; fileRef = 0119CEC514F877B8004A478C /* testForm.txt */; };
 		011E824A14F86111006478BA /* FormsListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 011E824914F86111006478BA /* FormsListViewController.m */; };
 		012F0FC214F8822B00EF332D /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 012F0FC114F8822B00EF332D /* CoreData.framework */; };
+		01702BA715098F8D00819119 /* SelectRowTypeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 01702BA615098F8D00819119 /* SelectRowTypeViewController.m */; };
+		018AB27C14FA8D4A005CCD11 /* AddSectionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 018AB27B14FA8D4A005CCD11 /* AddSectionViewController.m */; };
+		018AB28014FA9FFA005CCD11 /* FormSettingsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 018AB27F14FA9FFA005CCD11 /* FormSettingsViewController.m */; };
+		018AB28314FAB6F4005CCD11 /* EditTextItemViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 018AB28214FAB6F4005CCD11 /* EditTextItemViewController.m */; };
+		018AB28614FAFD14005CCD11 /* EditStaticItemViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 018AB28514FAFD14005CCD11 /* EditStaticItemViewController.m */; };
+		018AB28914FB038A005CCD11 /* EditIncrementalItemViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 018AB28814FB0389005CCD11 /* EditIncrementalItemViewController.m */; };
+		018AB28C14FB039C005CCD11 /* EditNumericItemViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 018AB28B14FB039B005CCD11 /* EditNumericItemViewController.m */; };
+		018AB28F14FB03D2005CCD11 /* EditRadioItemViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 018AB28E14FB03D2005CCD11 /* EditRadioItemViewController.m */; };
+		01A44D5F154706D80094CD7A /* PickerSelectionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 01A44D5E154706D80094CD7A /* PickerSelectionViewController.m */; };
+		01A44D62154716C70094CD7A /* MessageUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 01A44D61154716C70094CD7A /* MessageUI.framework */; };
+		01A44D6815474F760094CD7A /* DownloadFormViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 01A44D6715474F760094CD7A /* DownloadFormViewController.m */; };
 		01A5C1E014F9AC5100B239E5 /* CreateEditListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 01A5C1DF14F9AC5100B239E5 /* CreateEditListViewController.m */; };
+		01C6728F1546009C00B1AF37 /* EditListItemViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 01C6728E1546009C00B1AF37 /* EditListItemViewController.m */; };
 		01E8336314F9BFA6007717E8 /* EditFormViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 01E8336214F9BFA6007717E8 /* EditFormViewController.m */; };
 		01E8336714F9CB94007717E8 /* AddRowViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 01E8336614F9CB94007717E8 /* AddRowViewController.m */; };
+		01FBF767150839E90070BB89 /* Texture--1b.png in Resources */ = {isa = PBXBuildFile; fileRef = 01FBF765150839E90070BB89 /* Texture--1b.png */; };
+		01FBF768150839E90070BB89 /* Texture--1a.png in Resources */ = {isa = PBXBuildFile; fileRef = 01FBF766150839E90070BB89 /* Texture--1a.png */; };
+		01FBF76C15096C3F0070BB89 /* CollectedDataListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 01FBF76B15096C3F0070BB89 /* CollectedDataListViewController.m */; };
+		01FBF76F15096E650070BB89 /* CollectedDataDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 01FBF76E15096E650070BB89 /* CollectedDataDetailViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -44,6 +61,7 @@
 /* Begin PBXFileReference section */
 		0106534014F96BB600AB0876 /* FormDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FormDetailViewController.h; sourceTree = "<group>"; };
 		0106534114F96BB600AB0876 /* FormDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FormDetailViewController.m; sourceTree = "<group>"; };
+		010BBADC15058A6D0006591C /* Texture--1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Texture--1.png"; sourceTree = "<group>"; };
 		0116321714F85D52009CB77E /* formidable.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = formidable.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0116321B14F85D52009CB77E /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		0116321D14F85D52009CB77E /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -70,12 +88,41 @@
 		011E824814F86111006478BA /* FormsListViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FormsListViewController.h; sourceTree = "<group>"; };
 		011E824914F86111006478BA /* FormsListViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FormsListViewController.m; sourceTree = "<group>"; };
 		012F0FC114F8822B00EF332D /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
+		01702BA515098F8D00819119 /* SelectRowTypeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SelectRowTypeViewController.h; sourceTree = "<group>"; };
+		01702BA615098F8D00819119 /* SelectRowTypeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SelectRowTypeViewController.m; sourceTree = "<group>"; };
+		018AB27A14FA8D4A005CCD11 /* AddSectionViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AddSectionViewController.h; sourceTree = "<group>"; };
+		018AB27B14FA8D4A005CCD11 /* AddSectionViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AddSectionViewController.m; sourceTree = "<group>"; };
+		018AB27E14FA9FFA005CCD11 /* FormSettingsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FormSettingsViewController.h; sourceTree = "<group>"; };
+		018AB27F14FA9FFA005CCD11 /* FormSettingsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FormSettingsViewController.m; sourceTree = "<group>"; };
+		018AB28114FAB6F4005CCD11 /* EditTextItemViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EditTextItemViewController.h; sourceTree = "<group>"; };
+		018AB28214FAB6F4005CCD11 /* EditTextItemViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EditTextItemViewController.m; sourceTree = "<group>"; };
+		018AB28414FAFD14005CCD11 /* EditStaticItemViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EditStaticItemViewController.h; sourceTree = "<group>"; };
+		018AB28514FAFD14005CCD11 /* EditStaticItemViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EditStaticItemViewController.m; sourceTree = "<group>"; };
+		018AB28714FB0389005CCD11 /* EditIncrementalItemViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EditIncrementalItemViewController.h; sourceTree = "<group>"; };
+		018AB28814FB0389005CCD11 /* EditIncrementalItemViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EditIncrementalItemViewController.m; sourceTree = "<group>"; };
+		018AB28A14FB039B005CCD11 /* EditNumericItemViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EditNumericItemViewController.h; sourceTree = "<group>"; };
+		018AB28B14FB039B005CCD11 /* EditNumericItemViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EditNumericItemViewController.m; sourceTree = "<group>"; };
+		018AB28D14FB03D2005CCD11 /* EditRadioItemViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EditRadioItemViewController.h; sourceTree = "<group>"; };
+		018AB28E14FB03D2005CCD11 /* EditRadioItemViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EditRadioItemViewController.m; sourceTree = "<group>"; };
+		01A44D5D154706D80094CD7A /* PickerSelectionViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = PickerSelectionViewController.h; path = formidable/PickerSelectionViewController.h; sourceTree = "<group>"; };
+		01A44D5E154706D80094CD7A /* PickerSelectionViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = PickerSelectionViewController.m; path = formidable/PickerSelectionViewController.m; sourceTree = "<group>"; };
+		01A44D61154716C70094CD7A /* MessageUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MessageUI.framework; path = System/Library/Frameworks/MessageUI.framework; sourceTree = SDKROOT; };
+		01A44D6615474F760094CD7A /* DownloadFormViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DownloadFormViewController.h; sourceTree = "<group>"; };
+		01A44D6715474F760094CD7A /* DownloadFormViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DownloadFormViewController.m; sourceTree = "<group>"; };
 		01A5C1DE14F9AC5100B239E5 /* CreateEditListViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CreateEditListViewController.h; sourceTree = "<group>"; };
 		01A5C1DF14F9AC5100B239E5 /* CreateEditListViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CreateEditListViewController.m; sourceTree = "<group>"; };
+		01C6728D1546009C00B1AF37 /* EditListItemViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EditListItemViewController.h; sourceTree = "<group>"; };
+		01C6728E1546009C00B1AF37 /* EditListItemViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EditListItemViewController.m; sourceTree = "<group>"; };
 		01E8336114F9BFA6007717E8 /* EditFormViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EditFormViewController.h; sourceTree = "<group>"; };
 		01E8336214F9BFA6007717E8 /* EditFormViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EditFormViewController.m; sourceTree = "<group>"; };
 		01E8336514F9CB94007717E8 /* AddRowViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AddRowViewController.h; sourceTree = "<group>"; };
 		01E8336614F9CB94007717E8 /* AddRowViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AddRowViewController.m; sourceTree = "<group>"; };
+		01FBF765150839E90070BB89 /* Texture--1b.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Texture--1b.png"; sourceTree = "<group>"; };
+		01FBF766150839E90070BB89 /* Texture--1a.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Texture--1a.png"; sourceTree = "<group>"; };
+		01FBF76A15096C3F0070BB89 /* CollectedDataListViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CollectedDataListViewController.h; sourceTree = "<group>"; };
+		01FBF76B15096C3F0070BB89 /* CollectedDataListViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CollectedDataListViewController.m; sourceTree = "<group>"; };
+		01FBF76D15096E650070BB89 /* CollectedDataDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CollectedDataDetailViewController.h; sourceTree = "<group>"; };
+		01FBF76E15096E650070BB89 /* CollectedDataDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CollectedDataDetailViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -83,6 +130,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				01A44D62154716C70094CD7A /* MessageUI.framework in Frameworks */,
 				012F0FC214F8822B00EF332D /* CoreData.framework in Frameworks */,
 				0116321C14F85D52009CB77E /* UIKit.framework in Frameworks */,
 				0116321E14F85D52009CB77E /* Foundation.framework in Frameworks */,
@@ -106,6 +154,9 @@
 		0116320C14F85D52009CB77E = {
 			isa = PBXGroup;
 			children = (
+				01A44D61154716C70094CD7A /* MessageUI.framework */,
+				01A44D5D154706D80094CD7A /* PickerSelectionViewController.h */,
+				01A44D5E154706D80094CD7A /* PickerSelectionViewController.m */,
 				0116322114F85D52009CB77E /* formidable */,
 				0116324214F85D52009CB77E /* formidableTests */,
 				0116321A14F85D52009CB77E /* Frameworks */,
@@ -137,6 +188,9 @@
 		0116322114F85D52009CB77E /* formidable */ = {
 			isa = PBXGroup;
 			children = (
+				01FBF765150839E90070BB89 /* Texture--1b.png */,
+				01FBF766150839E90070BB89 /* Texture--1a.png */,
+				010BBADC15058A6D0006591C /* Texture--1.png */,
 				0116322A14F85D52009CB77E /* AppDelegate.h */,
 				0116322B14F85D52009CB77E /* AppDelegate.m */,
 				0116322D14F85D52009CB77E /* MainStoryboard_iPhone.storyboard */,
@@ -157,6 +211,30 @@
 				01E8336214F9BFA6007717E8 /* EditFormViewController.m */,
 				01E8336514F9CB94007717E8 /* AddRowViewController.h */,
 				01E8336614F9CB94007717E8 /* AddRowViewController.m */,
+				018AB27A14FA8D4A005CCD11 /* AddSectionViewController.h */,
+				018AB27B14FA8D4A005CCD11 /* AddSectionViewController.m */,
+				018AB27E14FA9FFA005CCD11 /* FormSettingsViewController.h */,
+				018AB27F14FA9FFA005CCD11 /* FormSettingsViewController.m */,
+				018AB28114FAB6F4005CCD11 /* EditTextItemViewController.h */,
+				018AB28214FAB6F4005CCD11 /* EditTextItemViewController.m */,
+				01C6728D1546009C00B1AF37 /* EditListItemViewController.h */,
+				01C6728E1546009C00B1AF37 /* EditListItemViewController.m */,
+				018AB28414FAFD14005CCD11 /* EditStaticItemViewController.h */,
+				018AB28514FAFD14005CCD11 /* EditStaticItemViewController.m */,
+				018AB28714FB0389005CCD11 /* EditIncrementalItemViewController.h */,
+				018AB28814FB0389005CCD11 /* EditIncrementalItemViewController.m */,
+				018AB28A14FB039B005CCD11 /* EditNumericItemViewController.h */,
+				018AB28B14FB039B005CCD11 /* EditNumericItemViewController.m */,
+				018AB28D14FB03D2005CCD11 /* EditRadioItemViewController.h */,
+				018AB28E14FB03D2005CCD11 /* EditRadioItemViewController.m */,
+				01FBF76A15096C3F0070BB89 /* CollectedDataListViewController.h */,
+				01FBF76B15096C3F0070BB89 /* CollectedDataListViewController.m */,
+				01FBF76D15096E650070BB89 /* CollectedDataDetailViewController.h */,
+				01FBF76E15096E650070BB89 /* CollectedDataDetailViewController.m */,
+				01702BA515098F8D00819119 /* SelectRowTypeViewController.h */,
+				01702BA615098F8D00819119 /* SelectRowTypeViewController.m */,
+				01A44D6615474F760094CD7A /* DownloadFormViewController.h */,
+				01A44D6715474F760094CD7A /* DownloadFormViewController.m */,
 			);
 			path = formidable;
 			sourceTree = "<group>";
@@ -265,6 +343,9 @@
 				0116322F14F85D52009CB77E /* MainStoryboard_iPhone.storyboard in Resources */,
 				0116323214F85D52009CB77E /* MainStoryboard_iPad.storyboard in Resources */,
 				0119CEC614F877B8004A478C /* testForm.txt in Resources */,
+				010BBADD15058A6D0006591C /* Texture--1.png in Resources */,
+				01FBF767150839E90070BB89 /* Texture--1b.png in Resources */,
+				01FBF768150839E90070BB89 /* Texture--1a.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -308,6 +389,19 @@
 				01A5C1E014F9AC5100B239E5 /* CreateEditListViewController.m in Sources */,
 				01E8336314F9BFA6007717E8 /* EditFormViewController.m in Sources */,
 				01E8336714F9CB94007717E8 /* AddRowViewController.m in Sources */,
+				018AB27C14FA8D4A005CCD11 /* AddSectionViewController.m in Sources */,
+				018AB28014FA9FFA005CCD11 /* FormSettingsViewController.m in Sources */,
+				018AB28314FAB6F4005CCD11 /* EditTextItemViewController.m in Sources */,
+				018AB28614FAFD14005CCD11 /* EditStaticItemViewController.m in Sources */,
+				018AB28914FB038A005CCD11 /* EditIncrementalItemViewController.m in Sources */,
+				018AB28C14FB039C005CCD11 /* EditNumericItemViewController.m in Sources */,
+				018AB28F14FB03D2005CCD11 /* EditRadioItemViewController.m in Sources */,
+				01FBF76C15096C3F0070BB89 /* CollectedDataListViewController.m in Sources */,
+				01FBF76F15096E650070BB89 /* CollectedDataDetailViewController.m in Sources */,
+				01702BA715098F8D00819119 /* SelectRowTypeViewController.m in Sources */,
+				01C6728F1546009C00B1AF37 /* EditListItemViewController.m in Sources */,
+				01A44D5F154706D80094CD7A /* PickerSelectionViewController.m in Sources */,
+				01A44D6815474F760094CD7A /* DownloadFormViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -371,7 +465,8 @@
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
 				CLANG_ENABLE_OBJC_ARC = YES;
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CODE_SIGN_IDENTITY = "iPhone Developer: Chris Tucci (4TASM4FG2V)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: Chris Tucci (4TASM4FG2V)";
 				COPY_PHASE_STRIP = NO;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_DYNAMIC_NO_PIC = NO;
@@ -386,6 +481,8 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
+				PROVISIONING_PROFILE = "05021E85-6018-4A8E-A5DF-089707E57D76";
+				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "05021E85-6018-4A8E-A5DF-089707E57D76";
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -397,7 +494,8 @@
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
 				CLANG_ENABLE_OBJC_ARC = YES;
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CODE_SIGN_IDENTITY = "iPhone Distribution: Chris Tucci";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: Chris Tucci";
 				COPY_PHASE_STRIP = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
@@ -406,6 +504,8 @@
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
 				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
+				PROVISIONING_PROFILE = "79395832-CFDE-4CFD-B7E9-80C1BEFDCC2C";
+				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "79395832-CFDE-4CFD-B7E9-80C1BEFDCC2C";
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VALIDATE_PRODUCT = YES;
